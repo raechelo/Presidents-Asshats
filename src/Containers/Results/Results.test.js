@@ -1,6 +1,6 @@
 import React from 'react';
 import { fetchPres } from '../../Thunks/fetchPres';
-import { Results, mapDispatchToProps, mapStateToProps } from './Results';
+import { mapDispatchToProps, mapStateToProps } from './Results';
 
 jest.mock('../../Thunks/fetchPres')
 
@@ -15,6 +15,28 @@ describe('mapStateToProps', () => {
     }
     const mappedProps = mapStateToProps(mockState);
     expect(mappedProps).toEqual(expectedState)
+  });
+
+  it('should pass a boolean value for loading to props', () => {
+    const mockState = {
+      loading: false
+    }
+    const expectedState = {
+      loading: false
+    }
+    const mappedProps = mapStateToProps(mockState);
+    expect(mappedProps).toEqual(expectedState);
+  });
+
+  it('should pass an error message in case of an error', () => {
+    const mockState = {
+      error: 'Error!'
+    }
+    const expectedState = {
+      error: 'Error!'
+    }
+    const mappedProps = mapStateToProps(mockState);
+    expect(mappedProps).toEqual(expectedState);
   });
 });
 
