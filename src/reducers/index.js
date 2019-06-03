@@ -6,7 +6,7 @@ import { setError } from './errorReducer';
 export const rootReducer = combineReducers({
   pres: preziReducer,
   loading: isLoadingReducer,
-  setError
+  error: setError
 })
 
 export default rootReducer;

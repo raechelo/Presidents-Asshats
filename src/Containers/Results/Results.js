@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchPres } from './thunks/fetchPres';
-import PreziCard from './PreziCard';
+import { fetchPres } from '../../Thunks/fetchPres';
+import PreziCard from '../../Components/PreziCard/PreziCard';
 
 export class Results extends Component {
   
@@ -14,14 +14,17 @@ export class Results extends Component {
     const displayCards = this.props.pres.map(p => (<PreziCard {...p} />))
     return (
       <section className="Results">
-        {displayCards}
+        {this.props.loading ? 'Loading...' : displayCards}
+        {this.props.error !== '' && <p>{this.props.error}</p>}
       </section>
     )
   }
 }
 
 export const mapStateToProps = state => ({
-  pres: state.pres
+  pres: state.pres,
+  loading: state.loading,
+  error: state.error
 })
 
 export const mapDispatchToProps = dispatch => ({
