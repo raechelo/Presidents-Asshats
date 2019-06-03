@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchPres } from './thunks/fetchPres';
+import PreziCard from './PreziCard';
 
 export class Results extends Component {
   
@@ -10,9 +11,10 @@ export class Results extends Component {
   }
 
   render() {
+    const displayCards = this.props.pres.map(p => (<PreziCard {...p} />))
     return (
-      <section>
-        
+      <section className="Results">
+        {displayCards}
       </section>
     )
   }
