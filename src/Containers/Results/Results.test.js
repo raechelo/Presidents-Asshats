@@ -1,6 +1,7 @@
 import React from 'react';
 import { fetchPres } from '../../Thunks/fetchPres';
 import { mapDispatchToProps, mapStateToProps } from './Results';
+import { shallow } from 'enzyme'
 
 jest.mock('../../Thunks/fetchPres')
 
