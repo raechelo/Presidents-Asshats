@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchPres } from './thunks/fetchPres';
-import PreziCard from './PreziCard';
+import { fetchPres } from '../../Thunks/fetchPres';
+import PreziCard from '../../Components/PreziCard/PreziCard';
 
 export class Results extends Component {
   

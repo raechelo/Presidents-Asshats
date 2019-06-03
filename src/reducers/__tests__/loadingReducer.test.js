@@ -13,7 +13,7 @@ describe('isLoading', () => {
 
   it('should return an truthy value in case of loading', () => {
     const expected = true;
-    const result = isLoadingReducer(undefined, isLoading(true));
+    const result = isLoadingReducer(undefined, actions.isLoading(true));
 
     expect(result).toEqual(expected);
   });

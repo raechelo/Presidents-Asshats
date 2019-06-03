@@ -5,9 +5,9 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension';
 import './index.scss';
-import App from './App';
+import App from './Components/App/App';
 import * as serviceWorker from './serviceWorker';
-import rootReducer from './reducers/index';
+import rootReducer from './Reducers/index';
 
 const store = createStore(
   rootReducer,

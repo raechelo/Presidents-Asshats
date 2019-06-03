@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Results from './Results';  
+import Results from '../../Containers/Results/Results';  
 
 class App extends Component {
 
