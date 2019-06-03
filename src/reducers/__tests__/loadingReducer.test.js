@@ -1,5 +1,4 @@
 import { isLoadingReducer } from '../loadingReducer';
-import { isLoading } from '../../actions';
 import * as actions from '../../actions';
 
 describe('isLoading', () => {
