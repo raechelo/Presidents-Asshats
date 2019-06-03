@@ -14,14 +14,15 @@ export class Results extends Component {
     const displayCards = this.props.pres.map(p => (<PreziCard {...p} />))
     return (
       <section className="Results">
-        {displayCards}
+        {this.props.loading ? 'Loading...' : displayCards}
       </section>
     )
   }
 }
 
 export const mapStateToProps = state => ({
-  pres: state.pres
+  pres: state.pres,
+  loading: state.loading
 })
 
 export const mapDispatchToProps = dispatch => ({
