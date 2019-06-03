@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { fetchPres } from '../../Thunks/fetchPres';
 import PreziCard from '../../Components/PreziCard/PreziCard';
 
+
 export class Results extends Component {
   
   componentDidMount() {
