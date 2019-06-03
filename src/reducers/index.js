@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import { preziReducer } from './preziReducer';
 
 export const rootReducer = combineReducers({
-  preziReducer
+  pres: preziReducer
 })
 
 export default rootReducer;
