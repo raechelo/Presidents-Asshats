@@ -15,6 +15,7 @@ export class Results extends Component {
     return (
       <section className="Results">
         {this.props.loading ? 'Loading...' : displayCards}
+        {this.props.error !== '' && <p>{this.props.error}</p>}
       </section>
     )
   }
@@ -22,7 +23,8 @@ export class Results extends Component {
 
 export const mapStateToProps = state => ({
   pres: state.pres,
-  loading: state.loading
+  loading: state.loading,
+  error: state.error
 })
 
 export const mapDispatchToProps = dispatch => ({
